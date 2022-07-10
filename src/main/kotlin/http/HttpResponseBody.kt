@@ -1,8 +1,6 @@
 package http
 
-class HttpResponseBody<T>(statusCode: Int, body: T) {
-    private val statusCode = statusCode
-    private val body = body
+class HttpResponseBody<T>(private val statusCode: Int, private val body: T) {
 
     fun getResponseCode(): Int {
         return statusCode
